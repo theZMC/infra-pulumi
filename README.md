@@ -1,10 +1,12 @@
 # Infrastructure Repository
 
 > [!IMPORTANT]
-> **Frozen.** DNS management is moving to theZMC/infra (private; OpenTofu + Atmos). The CI workflows
-> here are disabled, so merging changes nothing live. Until the move is finished, apply DNS changes
-> locally with `pulumi up`. The theZMC/infra runbook has the steps under "DNS changes until the
-> Cloudflare cutover". Commit what you apply so this code matches what's live.
+> **Retired and archived.** Nothing here is live. Everything these stacks managed (DNS in Cloudflare
+> and the GitHub Actions role in AWS) is now managed with OpenTofu and Atmos in theZMC/infra
+> (private). The Pulumi stacks and their state backend are gone, so `pulumi up` has nothing to run
+> against, and the secrets in the `Pulumi.prod.yaml` files can't be decrypted any more. The code stays
+> as a record of what Pulumi managed; the rest of this README describes the repository as it worked
+> before it was retired.
 
 This repository manages infrastructure using Pulumi with TypeScript.
 
